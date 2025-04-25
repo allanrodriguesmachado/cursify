@@ -1,4 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@use '@angular/material' as mat;
+:root {
+    @include mat.core-overrides((
+      app-background-color: #121212,
+      app-text-color: white
+    ));
+  }
+  
+  html {
+    color-scheme: dark;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: var(--mat-app-background-color);
+    color: var(--mat-app-text-color);
+  }
+  
